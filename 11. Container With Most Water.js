@@ -31,5 +31,17 @@ const maxArea = (heights) => {
   return maxArea;
 };
 
-console.log(maxArea([1, 8, 6, 2, 5, 4, 8, 3, 7]));
-console.log(maxArea([1, 1]));
+// Test cases
+const testCases = [
+  { height: [1, 8, 6, 2, 5, 4, 8, 3, 7], expected: 49 },
+  { height: [1, 1], expected: 1 },
+];
+
+for (let i = 0; i < testCases.length; i++) {
+  const { height, expected } = testCases[i];
+  const result = maxArea(height);
+  console.log(`Input: height = ${JSON.stringify(height)}`);
+  console.log(`Output: ${result}`);
+  console.log(`Expected: ${expected}`);
+  console.log("---");
+}
