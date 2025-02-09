@@ -22,7 +22,7 @@ Explanation: The array contains only one element 1, and the target 0 is not foun
 var searchInRotatedArray = (nums, target) => {
   let start = 0,
     end = nums.length - 1;
-  while (start <= end) {
+  while (start <= end) {Input: nums = [4,5,6,7,0,1,2], target = 0
     const mid = Math.floor(start + (end - start) / 2);
     if (nums[mid] === target) {
       return mid;
